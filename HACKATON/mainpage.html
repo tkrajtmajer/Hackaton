@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300&display=swap" rel="stylesheet">
+    <style>
+      body {
+        text-align: center;
+        padding: 10;
+        font-family: 'Roboto', sans-serif;
+        background-image: url(images/cvijece.png);
+        background-position: right -70px top -150px;
+        background-repeat: no-repeat;
+      }
+
+      #savjet {
+        text-align: center;
+        margin-left: 30%;
+        margin-right: 30%;
+        font-size: 20px;
+      }
+
+      #naziv {
+        margin-left: 30%;
+        margin-right: 30%;
+        font-size: 27px;
+        font-weight: bold;
+      }
+
+      #sijalica {
+        margin-left: 41%;
+        margin-right: 30%;
+        margin-top: 2%;
+        margin-bottom: -32%;
+      }
+      .flex-container {
+        display: flex;
+        justify-content: center;
+      }
+
+      .dugme {
+      	background-color:transparent;
+      	border:1px solid #18ab29;
+      	display:inline-block;
+      	cursor:pointer;
+      	color:#4d4d4d;
+        margin:15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 200;
+      	font-size:18px;
+      	padding:15px 12px;
+      	text-decoration:none;
+
+      }
+      .dugme:hover {
+      	background-color:transparent;
+      }
+      .dugme:active {
+      	position:relative;
+      	top:1px;
+      }
+    </style>
+  </head>
+  <body onload="myFunction()">
+    <script>
+      function myFunction() {
+        var x = Math.floor((Math.random() * 3) + 1);
+
+        var naziv = "SAVJET!";
+        var savjet = ["Toplotne pumpe mogu proizvesti energiju za grijanje prostora i vode ne koristeci vise od 25 posto elektricne energije kupljene preko distributera, cak i pri vrlo niskim zimskim temperaturama.", "Iskoristite toplotnu energiju sunca. Tokom dana podignite roletne na prozorima kako bi sunce prirodno zagrijalo prostoriju.", "Za hladne zimske mjesece koristite prozirni plastični lim na okviru ili prozirnom plastičnom folijom s unutarnje strane prozorskog okvira. Osigurajte da se plastika čvrsto zalijepi za okvir kako bi se smanjila infiltracija.Na prozore stavite nepropusne zavjese ili sjenila koja osjećaju prozračnost nakon propadanja boje.Saznajte o drugim tretmanima prozora i oblogama koji mogu poboljšati energetsku efikasnost.", "Ako zagrijavate ispod 18 ° C, iznenađujuća je razlika - ušteda oko 10% energije po stepenu. Zdravstveni radnici preporučuju 18 ° C kao najnižu temperaturu za osobe starije od 65 godina i one koji imaju problema sa zdravljem.", "Prozori sa dvostrukim ili trostrukim ostakljenjem čine kuću toplijom i smanjuju buku izvana.", "Ugradite PVC prozore - imaju bolju termoizolaciju od drvenih", "Redovno čistite radijatore kako prijelaz topline ne bi bio otežan uslijed stvaranja nečistoća.","Ako dimnjak ne koristite, zatvorite ga jer toplota odlazi kroz njega", "Premjestite sav namještaj i stvari dalje od otvora za grijanje kako bi mogli isporučiti svu toplinu za koju plaćate."];
+
+        document.getElementById("naziv").innerHTML = naziv;
+        document.getElementById("savjet").innerHTML = savjet[x-1];
+      }
+    </script>
+
+    <div id="sijalica">
+      <img src="images/sijalica.png" width="110%">
+    </div>
+
+    <div class="savjeti">
+      <p id="naziv"></p>
+      <p id="savjet"></p>
+    </div>
+
+    <div class="flex-container">
+      <div id="novisavjet"><button class="dugme" onclick="myFunction()">novi savjet!</button></div>
+      <div id="noviunos"><form action="hackaton2019.html">
+        <button class="dugme" action="hackaton2019.html">novi unos</button>
+      </form></div>
+    </div>
+
+  </body>
+
+</html>

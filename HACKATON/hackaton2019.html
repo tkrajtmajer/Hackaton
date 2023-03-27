@@ -1,0 +1,236 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+       kalkulator
+    </title>
+   <link href="https://fonts.googleapis.com/css?family=Roboto:100&display=swap" rel="stylesheet">
+    <style>
+
+
+       body {
+       	text-align: center;
+       	margin-top: 4%;
+		/*font-family: 'ostrich_sanslight';
+		    src: url('desktop/hackaton/fonts/webfontkit-20191019-041029/ostrichsans-light.woff2') format('woff2'),
+		         url('desktop/hackaton/fonts/webfontkit-20191019-041029/ostrichsans-light.woff') format('woff');
+*/      animation: fadeInAnimation ease 2s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        font-family: 'Roboto', sans-serif;
+        background-image: url(images/planeta.png), url(images/avioncic.png);
+        background-position: right -40px top +280px, left -35px top -200px;
+        background-repeat: no-repeat, no-repeat;
+       }
+
+       h1 {
+       	font-size: 40px;
+       }
+
+       .flex-container {
+         display: flex;
+         justify-content: center;
+       }
+
+       .dugme {
+       	background-color:transparent;
+       	border:1px solid #18ab29;
+       	display:inline-block;
+       	cursor:pointer;
+       	color: rgba(112, 112, 112, 0.9);
+        font-family: 'Roboto', sans-serif;
+        margin:15px;
+       	font-size:18px;
+       	padding:15px 12px;
+       	text-decoration:none;
+
+
+       }
+       .dugme:hover {
+       	background-color:transparent;
+       }
+       .dugme:active {
+       	position:relative;
+       	top:1px;
+       }
+
+
+
+     .slider {
+       -webkit-appearance: none;
+       width: 5%;
+       height: 5px;
+       border-radius: 0px;
+       background: #ededed;
+       outline: none;
+       opacity: 0.7;
+       -webkit-transition: .2s;
+       transition: opacity .2s;
+       padding-bottom: 20px;
+       margin-bottom: 1%;
+
+     }
+     .slider:hover {
+       opacity: 1;
+     }
+     .slider::-webkit-slider-thumb {
+       -webkit-appearance: none;
+       appearance: none;
+       width: 25px;
+       height: 25px;
+       border-radius: 50%;
+       background: #4CAF50;
+       cursor: pointer;
+     }
+     .slider::-moz-range-thumb {
+       width: 25px;
+       height: 25px;
+       border-radius: 50%;
+       background: #4CAF50;
+       cursor: pointer;
+     }
+
+/*       @font-face {
+		    font-family: 'ostrich_sanslight';
+		    src: url('ostrichsans-light.woff2') format('woff2'),
+		         url('ostrichsans-light.woff') format('woff');
+		    font-weight: normal;
+		    font-style: normal;
+		}
+*/
+
+       @keyframes fadeInAnimation {
+	        0% {
+	            opacity: 0;
+	        }
+	        100% {
+	            opacity: 1;
+        }
+
+    </style>
+
+    <script type="text/javascript" src ="script/app.js"></script>
+
+</head>
+
+<body>
+
+	<div id="welcome">
+
+    <div id="logo">
+      <img src="images/logo.png" width="13%">
+    </div>
+
+    <h1 style="color: green">
+        smanjite temperaturu u stanu i uštedite energiju!
+    </h1>
+	</div>
+
+
+
+<body>
+
+    <div id="Povrsina">
+	    <p>
+	        unesite dužinu, širinu, visinu sobe i temperaturu:
+	    </p>
+
+
+      <form name="form1">
+          visina: <input type="text" name="heigth"" required>m
+          širina: <input type="text" name="width" required>m
+          dužina: <input type="text" name="length" required>m
+          kvadratura prozora: <input type="text" name="kvad" required>m^2<br><br>
+          unutrašnja temperatura: <input type="text" name="tI" required>ºC
+          vanjska temperatura: <input type="text" name="tE" required>ºC<br><br>
+          debljina zida 1: <input type="text" name="d1" required>m
+          <select id="tip1" required>
+            <option>--None--</option>
+            <option>Stakleno vlakno</option>
+            <option>Mineralna vuna</option>
+            <option>Celuloza</option>
+            <option>Ekspandirani polistiren (stiropor)</option>
+            <option>Drvo</option>
+            <option>Cement</option>
+            <option>Cigla</option>
+            <option>Beton</option>
+            <option>Glina</option>
+          </select><br>
+          debljina zida 2: <input type="text" name="d2">m
+          <select id="tip2">
+            <option>--None--</option>
+            <option>Stakleno vlakno</option>
+            <option>Mineralna vuna</option>
+            <option>Celuloza</option>
+            <option>Ekspandirani polistiren (stiropor)</option>
+            <option>Drvo</option>
+            <option>Cement</option>
+            <option>Cigla</option>
+            <option>Beton</option>
+            <option>Glina</option>
+          </select><br>
+          debljina zida 3: <input type="text" name="d3">m
+          <select id="tip3">
+            <option>--None--</option>
+            <option>Stakleno vlakno</option>
+            <option>Mineralna vuna</option>
+            <option>Celuloza</option>
+            <option>Ekspandirani polistiren (stiropor)</option>
+            <option>Drvo</option>
+            <option>Cement</option>
+            <option>Cigla</option>
+            <option>Beton</option>
+            <option>Glina</option>
+          </select><br>
+          debljina zida 4: <input type="text" name="d4">m
+          <select id="tip4">
+            <option>--None--</option>
+            <option>Stakleno vlakno</option>
+            <option>Mineralna vuna</option>
+            <option>Celuloza</option>
+            <option>Ekspandirani polistiren (stiropor)</option>
+            <option>Drvo</option>
+            <option>Cement</option>
+            <option>Cigla</option>
+            <option>Beton</option>
+            <option>Glina</option>
+          </select><br>
+          debljina zida 5: <input type="text" name="d5">m
+          <select id="tip5">
+            <option>--None--</option>
+            <option>Stakleno vlakno</option>
+            <option>Mineralna vuna</option>
+            <option>Celuloza</option>
+            <option>Ekspandirani polistiren (stiropor)</option>
+            <option>Drvo</option>
+            <option>Cement</option>
+            <option>Cigla</option>
+            <option>Beton</option>
+            <option>Glina</option>
+          </select><br><br>
+          povisiti/sniziti temperaturu za: <input type="text" name="koliko" required>ºC<br><br>
+          <div class="slidecontainer">
+            <p>struja / plin: </p>
+            <input type="range" min="1" max="2" class="slider" id="myRange">
+          </div>
+          </form>
+
+    <div class="flex-container">
+    <button class ="dugme" type="button" onclick="myFunction()">kalkuliši!</button>
+
+    <form action="mainpage.html" >
+      <button class="dugme" type="submit">šta učiniti?</button>
+    </form>
+    </div>
+
+    <p id="sat"></p>
+    <p id="dan"></p>
+    <p id="mjesec"></p>
+
+
+
+</body>
+
+</html>
